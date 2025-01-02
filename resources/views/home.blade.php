@@ -163,7 +163,7 @@
         <h1>Your Protection, Our Priority</h1>
         <p>Affordable, reliable, and tailored insurance solutions for every stage of life.</p>
         <div class="hero-buttons">
-            <button class="button-primary">Get a Quote</button>
+            <a href="{{ route("books") }}" class="button-primary">Browse all books</button>
             <button class="button-secondary">Learn More</button>
         </div>
     </div>

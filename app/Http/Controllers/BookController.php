@@ -25,4 +25,13 @@ class BookController extends Controller
             'books' => $all_books,
         ]);
     }
+
+    public function bookDetail ($id){
+        // find the book with the id
+        $book = Book::find($id);
+        // sending the data to the view
+        return view("book_detail",[
+            'book' => $book,
+        ]);
+    }
 }

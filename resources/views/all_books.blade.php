@@ -109,7 +109,7 @@
                         <p class="card-description">{{ $item->description }}</p>
                         <div class="card-footer">
                             <span>$ {{ $item->price }}</span>
-                            <a href="#">Buy Now</a>
+                            <a href="{{ route("bookDetail",$item->id) }}">Buy Now</a>
                         </div>
                     </div>
                 </div>
