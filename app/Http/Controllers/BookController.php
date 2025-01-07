@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
     public function index()
     {
-        return view("home");
+        $categories = Category::all();
+        $books = Book::paginate(8);
+        return view("home2",[
+            'kitabein' => $books,
+            'categories' => $categories,
+        ]);
     }
 
     public function about()
@@ -30,7 +36,7 @@ class BookController extends Controller
         // find the book with the id
         $book = Book::find($id);
         // sending the data to the view
-        return view("book_detail",[
+        return view("book_detail2",[
             'book' => $book,
         ]);
     }
